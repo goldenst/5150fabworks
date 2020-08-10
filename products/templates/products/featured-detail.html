@@ -1,0 +1,9 @@
+<h1>Featured Detil</h1>
+
+
+{{object.title}} <br>
+{{object.description}}<br>
+{% if object.image %}
+<img src="{{object.image.url}}" class="img-fluid">
+{% endif %}
+{{object.price}}
