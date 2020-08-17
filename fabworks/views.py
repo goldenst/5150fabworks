@@ -6,6 +6,7 @@ from .forms import ContactForm, LoginForm, RegisterForm
 
 # ---------------------- LANDING ---------------------------
 def landing(request):
+    # print(request.session.get('first_name', 'Unkown'))
     return render(request, 'landing.html', {})
 
 # ----------------------- ABOUT ---------------------------

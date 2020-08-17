@@ -5,6 +5,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
 
+from carts.views import cart_home
 
 from .views import landing, about, contact, login_page, register_page
 
@@ -13,15 +14,11 @@ urlpatterns = [
     path('', landing , name='home'),
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
+    path('cart/', cart_home, name="cart"),
     path('login/', login_page, name="login"),
     path('register/', register_page, name="register"),
     path('products/', include("products.urls", namespace="products")),
     path('search/', include("search.urls", namespace="search")),
-    # path('featured/', ProductFeaturedListView.as_view()),
-    # path('featured/<pk>', ProductFeaturedDetailView.as_view()),
-    # path('products/', ProductListView.as_view()),
-    # path('products/<pk>', ProductDetailView.as_view()),
-    # path('products/<slug>', ProductDetailSlugView.as_view()),
     path('admin/', admin.site.urls),
 ]
 
