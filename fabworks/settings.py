@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # My APPS
 
     'products',
+    'search',
     
 ]
 
