@@ -15,5 +15,10 @@
 {{object.price}}
 </div>
 </div>
+<div class="col-12">
+    {% include 'products/snippets/update-cart.html' with product=object cart=cart %}
+  
 </div>
+</div>
+
 {% endblock %}
