@@ -39,10 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # My APPS
+    'accounts',
     'carts',
     'products',
     'search',
     'tags',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +56,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# AUTH_USER_MODEL = "auth.User"
+
+LOGOUT_REDIRECT_URL = '/login/'
 
 ROOT_URLCONF = 'fabworks.urls'
 

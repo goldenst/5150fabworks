@@ -7,6 +7,7 @@ from django.shortcuts import render, get_object_or_404
 
 from products.models import Product
 
+app_name = 'tags'
 
 class SearchProductView(ListView):
     template_name = 'search/view.html'
